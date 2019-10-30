@@ -1,6 +1,6 @@
 resource "google_container_cluster" "primary" {
-  name               = "gke-confluent"
-  location           = "australia-southeast1-a"
+  name               = "${var.cluster_name}"
+  location           = "${var.cluster_location}"
   initial_node_count = 6
 
   master_auth {

@@ -1,11 +1,11 @@
 resource "helm_release" "operator" {
     name      = "operator"
-    chart     = "confluent-operator/helm/confluent-operator"
+    chart     = "${var.chart_location}"
     namespace = "operator"
     wait      = true
     
     values = [
-        "${file("confluent-operator/helm/providers/gcp.yaml")}"
+        "${file("${var.gke_chart}")}"
     ]
     set {
         name  = "operator.enabled"
@@ -19,12 +19,12 @@ resource "helm_release" "operator" {
 
 resource "helm_release" "zookeeper" {
     name      = "zookeeper"
-    chart     = "confluent-operator/helm/confluent-operator"
+    chart     = "${var.chart_location}"
     namespace = "operator"
     wait      = true
     
     values = [
-        "${file("confluent-operator/helm/providers/gcp.yaml")}"
+        "${file("${var.gke_chart}")}"
     ]
     set {
         name  = "zookeeper.enabled"
@@ -39,12 +39,12 @@ resource "helm_release" "zookeeper" {
 
 resource "helm_release" "kafka" {
     name      = "kafka"
-    chart     = "confluent-operator/helm/confluent-operator"
+    chart     = "${var.chart_location}"
     namespace = "operator"
     wait      = true
 
     values = [
-        "${file("confluent-operator/helm/providers/gcp.yaml")}"
+        "${file("${var.gke_chart}")}"
     ]
     set {
         name  = "kafka.enabled"
@@ -59,12 +59,12 @@ resource "helm_release" "kafka" {
 
 resource "helm_release" "schemaregistry" {
     name      = "schemaregistry"
-    chart     = "confluent-operator/helm/confluent-operator"
+    chart     = "${var.chart_location}"
     namespace = "operator"
     wait      = true
 
     values = [
-        "${file("confluent-operator/helm/providers/gcp.yaml")}"
+        "${file("${var.gke_chart}")}"
     ]
     set {
         name  = "schemaregistry.enabled"
@@ -79,12 +79,12 @@ resource "helm_release" "schemaregistry" {
 
 resource "helm_release" "controlcenter" {
     name      = "controlcenter"
-    chart     = "confluent-operator/helm/confluent-operator"
+    chart     = "${var.chart_location}"
     namespace = "operator"
     wait      = true
     
     values = [
-        "${file("confluent-operator/helm/providers/gcp.yaml")}"
+        "${file("${var.gke_chart}")}"
     ]
     set {
         name  = "controlcenter.enabled"
