@@ -1,0 +1,9 @@
+#Google Cloud Credentials
+credentials/
+
+#  Local .terraform directories
+**/.terraform/*
+
+# .tfstate files
+*.tfstate
+*.tfstate.*
