@@ -33,7 +33,7 @@ resource "google_container_cluster" "primary" {
   }
 
   provisioner "local-exec" {
-    command = "gcloud container clusters get-credentials gke-confluent --zone australia-southeast1-a --project charlie-feng-contino"
+    command = "gcloud container clusters get-credentials ${var.cluster_name} --zone ${var.cluster_location} --project ${var.project_id}"
   }
 
 }
