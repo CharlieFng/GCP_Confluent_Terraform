@@ -1,3 +1,0 @@
-provider "kubernetes" {
-  config_context_cluster   = "gke_charlie-feng-contino_australia-southeast1_gke-confluent"
-}
