@@ -1,5 +1,5 @@
 provider "helm" {
-#  version        = "-> 2.9"
   install_tiller = true
   service_account = "tiller"
+  tiller_image = "gcr.io/kubernetes-helm/tiller:v2.9.0"
 }
