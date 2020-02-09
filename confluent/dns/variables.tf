@@ -2,6 +2,7 @@ variable "credential_path" {
   default = "../../credentials"
 }
 
+
 variable "project_id" {
   default = "charlie-feng-contino"
 }

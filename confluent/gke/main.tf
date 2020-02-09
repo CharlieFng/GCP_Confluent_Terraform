@@ -14,7 +14,7 @@ resource "google_container_cluster" "primary" {
 
   node_config {
 
-    preemptible  = true
+    preemptible  = false
     machine_type = "n1-highmem-2"
 
     oauth_scopes = [
