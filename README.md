@@ -4,21 +4,24 @@ This project using terraform supported by different providers (google cloud plat
 ## Getting Started
 
 ### Prerequisites
-* Prepare a GCP project, enable GKE API
-* Provsion appropriate service account credential, download and name it as **credential.json** under *credentials* folder 
+* Prepare a GCP project, enable GKE API, provsion an appropriate service account
+*  credential, 
 * Install client tools in your cloud shell 
     * kubectl (v1.13.11)
     * helm (v2.9.0)
     * terraform (v0.12.9)
     * terragrunt (v0.21.1) [optional]
-* Prepare a DNS from your dns registry, create a managed zone in cloud DNS of your GCP project, and add google dns nameservers into your dns registry
+* Register a domain from your dns registry, create a managed zone in cloud DNS of your GCP project, and add google dns nameservers into your dns registry
 
 
-### Installing 
+## Installing 
 All the following steps will be executed via cloud shell, since this project includes several different modules, you can execute them one by one in correct order using terraform or execute them all together using terragrunt.
 
 #### Checkout the project using HTTPS 
-`git clone git@github.com:CharlieFng/GCP_Terraform.git`
+`git clone https://github.com/CharlieFng/GCP_Confluent_Terraform.git`
+
+#### Update credentials  
+Download service account credential, name it as credential.json under credentials folder
 
 ### Installing as individual terraform project
 
