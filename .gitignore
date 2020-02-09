@@ -1,6 +1,5 @@
 #Google Cloud Credentials
-credentials/
-test/
+credentials/*.json
 
 #  Local .terraform directories
 **/.terraform/*

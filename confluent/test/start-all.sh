@@ -1,0 +1,1 @@
+terragrunt apply-all
